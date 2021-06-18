@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen>
     vsync: this,
   )..forward().whenComplete(() async {
       await Future.delayed(Duration(seconds: 1));
-      Navigator.of(context).push(
+      Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => HomeScreen(),
         ),
@@ -76,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen>
                 ),
               )),
               child: Image.asset(
-                'assets/images/AirPlane.png',
+                'assets/images/air-plane.png',
                 width: 60,
               ),
             ),
